@@ -19,13 +19,14 @@ class Calc extends Component {
       }
       case "=": {
         this.setState({
-          value: eval(this.state.value)
+          value: String(eval(this.state.value))
         });
+
         break;
       }
-      case "+/-": {
+      case "<": {
         this.setState({
-          value: this.state.value !== "+/-" ? "-" : ""
+          value: this.state.value.slice(0, -1)
         });
         break;
       }
@@ -63,7 +64,7 @@ class Calc extends Component {
                   className="op badge-secondary"
                   onClick={this.handleClick}
                   type="button"
-                  value="+/-"
+                  value="<"
                 />
               </td>
               <td>
