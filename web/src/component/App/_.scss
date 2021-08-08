@@ -1,0 +1,33 @@
+@import "../../styles/utilities";
+
+.app {
+  @extend .center;
+  font-size: 2rem;
+  font-weight: 900;
+
+  &--header,
+  &--footer {
+    height: 4rem;
+    @extend .center;
+  }
+
+  &--header {
+    background-color: lightgreen;
+  }
+  &--body {
+    flex: 1;
+    @extend .center;
+    background-color: lightsalmon;
+
+    &__active {
+      cursor: pointer;
+      color: lightcyan;
+    }
+    &__inactive {
+      cursor: not-allowed;
+    }
+  }
+  &--footer {
+    background-color: mediumorchid;
+  }
+}

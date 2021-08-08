@@ -1,0 +1,56 @@
+.ComponentC2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: lightgrey;
+
+  .form-header {
+    text-align: center;
+  }
+  .form-row {
+    display: inherit;
+
+    & > input,
+    & > button {
+      border-radius: 0.25rem;
+    }
+
+    & > label {
+      width: 100%;
+      justify-content: flex-start;
+      padding: 3px;
+    }
+
+    & > input {
+      outline: none;
+      padding: 0.7rem;
+      margin: 0;
+      border: none;
+      font-size: 1rem;
+      width: 90%;
+    }
+
+    & > button {
+      width: 90%;
+      margin-top: 15px;
+      padding: 0.5rem;
+      background-color: blue;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 800;
+      border: none;
+    }
+    & > small {
+      display: inherit;
+      color: red;
+      font-size: 10;
+      padding: 5px;
+    }
+
+    .p-viewer {
+      position: relative;
+      margin: 10px 0 0 -30px;
+    }
+  }
+}

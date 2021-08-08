@@ -1,0 +1,35 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 13px;
+  background-color: #fbf7f524;
+}
+
+h2 {
+  text-align: center;
+}
+
+.screen {
+  width: 100%;
+  font-size: 20px;
+  padding: 5px 3px 5px 0;
+  margin: 1px 0 1px 0;
+  text-align: right;
+}
+
+.badge-secondary {
+  width: 55px;
+  height: 55px;
+  font-size: 20px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
