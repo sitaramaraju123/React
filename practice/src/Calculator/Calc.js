@@ -30,7 +30,13 @@ class Calc extends Component {
         });
         break;
       }
-
+      case "+":
+      case "-":
+      case "/":
+      case "*":
+      case "%": {
+        break;
+      }
       default: {
         this.setState({
           value: (this.state.value += value)

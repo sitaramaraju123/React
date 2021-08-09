@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // import Calc from "./Calculator/Calc";
+// import Fetch from "./Fetching";
 // import Main from "./ChatBox/Main";
 // import ClassComponent from "./classComponent";
 import "./index.css";
@@ -14,6 +15,7 @@ import PracticeValidation from "./Validations/PracticeValidation";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Fetch /> */}
     {/* <Calc /> */}
     {/* <App /> */}
     {/* <Main /> */}
