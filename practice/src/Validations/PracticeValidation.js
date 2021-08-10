@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./p.scss";
 class PracticeValidation extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class PracticeValidation extends Component {
       hidden: true,
       formError: {}
     };
-    this.initialState = this.state;
+    // this.initialState = this.state;
   }
 
   handleFormValidation() {
@@ -75,10 +76,28 @@ class PracticeValidation extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    const { firstName, lastName, email, password, confirmPassword, contact } =
+      this.state;
     if (this.handleFormValidation()) {
-      alert("You have been successfully registered.");
-      this.setState(this.initialState);
+      if (localStorage.getItem("signUp") == null) {
+        localStorage.setItem("signUp", "[]");
+      }
+      let items = JSON.parse(localStorage.getItem("signUp"));
+      items.push({
+        firstName,
+        lastName,
+        email,
+        password,
+        confirmPassword,
+        contact
+      });
+      localStorage.setItem("signUp", JSON.stringify(items));
+      alert("Registration success go to login");
     }
+
+    // this.setState(Prevstate => {
+    //   Prevstate.firstName = "";
+    // });
   };
 
   passwordVisible = e => {
@@ -176,6 +195,11 @@ class PracticeValidation extends Component {
             <button type="submit">Submit</button>
           </div>
         </form>
+        <div>
+          <p>
+            Already having account go to <Link to="/Login">Login</Link>
+          </p>
+        </div>
       </div>
     );
   }

@@ -5,9 +5,10 @@ import ReactDOM from "react-dom";
 // import Main from "./ChatBox/Main";
 // import ClassComponent from "./classComponent";
 import "./index.css";
+import Form from "./Validations/form";
+// import Toggle from "./Toggle";
 // import Counters from "./Mosh/counters";
 // import App from "./App";
-import PracticeValidation from "./Validations/PracticeValidation";
 // import Todo from "./TodoList/Todo";
 // import Practice, { Normal } from "./Practice";
 // import Incress from "./Increment/incress";
@@ -15,11 +16,12 @@ import PracticeValidation from "./Validations/PracticeValidation";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Toggle /> */}
     {/* <Fetch /> */}
     {/* <Calc /> */}
     {/* <App /> */}
     {/* <Main /> */}
-    <PracticeValidation />
+    <Form />
     {/* <Practice name="I am Functional Component" />
     <Normal /> */}
     {/* <Practice1 /> */}
