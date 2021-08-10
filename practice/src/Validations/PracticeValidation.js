@@ -93,11 +93,15 @@ class PracticeValidation extends Component {
       });
       localStorage.setItem("signUp", JSON.stringify(items));
       alert("Registration success go to login");
+      this.setState(Prevstate => {
+        Prevstate.firstName = "";
+        Prevstate.lastName = "";
+        Prevstate.email = "";
+        Prevstate.password = "";
+        Prevstate.confirmPassword = "";
+        Prevstate.contact = "";
+      });
     }
-
-    // this.setState(Prevstate => {
-    //   Prevstate.firstName = "";
-    // });
   };
 
   passwordVisible = e => {

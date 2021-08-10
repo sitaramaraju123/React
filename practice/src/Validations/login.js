@@ -33,7 +33,7 @@ class Login extends Component {
       }
       if (email !== user) {
         formIsValid = false;
-        formError["email"] = `Email doesn't Exist create your account`;
+        formError["email"] = `Email doesn't Exist create account`;
       } else if (!password) {
         formIsValid = false;
         formError["password"] = `Password is required`;
