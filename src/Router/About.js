@@ -1,15 +1,22 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { InAction } from "./action";
+const About = ({ name }) => {
+  return (
+    <div>
+      <center>
+        <h1>
+          About{" "}
+          {name.map(e => (
+            <div>{e}</div>
+          ))}
+        </h1>
+      </center>
+    </div>
+  );
+};
 
-class About extends Component {
-  render() {
-    return (
-      <div>
-        <center>
-          <h1>About</h1>
-        </center>
-      </div>
-    );
-  }
-}
-
-export default About;
+const mapStateToProps = state => ({
+  name: state
+});
+export default connect(mapStateToProps, { InAction })(About);
