@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 class Login extends Component {
   constructor(props) {
@@ -9,7 +9,8 @@ class Login extends Component {
       email: "",
       password: "",
       hidden: true,
-      formError: {}
+      formError: {},
+      reDirectform: false
     };
   }
 
@@ -51,7 +52,9 @@ class Login extends Component {
   onSubmit = e => {
     e.preventDefault();
     if (this.handleFormValidation()) {
-      alert("Login Success");
+      this.setState({
+        reDirectform: true
+      });
     }
   };
 
@@ -64,6 +67,8 @@ class Login extends Component {
 
   render() {
     const { email, password } = this.state.formError;
+    const reDirectform = this.state.reDirectform;
+    if (reDirectform === true) return <Redirect to="/Home" />;
     return (
       <div className="ComponentC2" style={{ fontSize: "1rem" }}>
         <form className="form-box" onSubmit={this.onSubmit}>
@@ -100,7 +105,7 @@ class Login extends Component {
           </div>
 
           <div className="form-row">
-            <button type="submit">Submit</button>
+            <button>Submit</button>
           </div>
           <p>
             Create Account here <Link to="/Register">Sign up</Link>

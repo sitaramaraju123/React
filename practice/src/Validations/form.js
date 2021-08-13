@@ -1,14 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./Home";
 import Login from "./login";
 import PracticeValidation from "./PracticeValidation";
 const Form = () => {
   return (
     <Router>
-      <div>
-        <Route path="/Register" component={PracticeValidation} />
-        <Route path="/Login" component={Login} />
-      </div>
+      <Switch>
+        <Route exact path="/Home" component={Home} />
+        <Route exact path="/Register" component={PracticeValidation} />
+        <Route exact path="/Login" component={Login} />
+      </Switch>
     </Router>
   );
 };

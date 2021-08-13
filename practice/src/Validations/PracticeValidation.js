@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./p.scss";
+
+export const UseContext = React.createContext();
 class PracticeValidation extends Component {
   constructor(props) {
     super(props);
@@ -114,6 +116,7 @@ class PracticeValidation extends Component {
   render() {
     const { firstName, lastName, email, password, confirmPassword, contact } =
       this.state.formError;
+    console.log(this.state.firstName);
 
     return (
       <div className="ComponentC2" style={{ fontSize: "1rem" }}>
