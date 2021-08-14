@@ -5,12 +5,7 @@ const About = ({ name }) => {
   return (
     <div>
       <center>
-        <h1>
-          About{" "}
-          {name.map(e => (
-            <div>{e}</div>
-          ))}
-        </h1>
+        <h1>{name.username}</h1>
       </center>
     </div>
   );

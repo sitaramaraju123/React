@@ -1,6 +1,7 @@
-export const InAction = value => async dispatch => {
+export const InAction = (value1, value2) => async dispatch => {
   dispatch({
     type: "SUBMIT",
-    payload: value
+    payload: value1,
+    payloadEmail: value2
   });
 };

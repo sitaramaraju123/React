@@ -3,15 +3,21 @@ import { connect } from "react-redux";
 import { InAction } from "./action";
 const Home = ({ InAction }) => {
   const [user, setName] = useState("");
+  const [email, setemail] = useState("");
   return (
     <div>
       <center>
         <input
           type="text"
-          placeholder="Enter any Thing"
+          placeholder="Username"
           onChange={e => setName(e.target.value)}
         />
-        <button onClick={() => InAction(user)}>Submit</button>
+        <input
+          type="text"
+          placeholder="Email"
+          onChange={e => setemail(e.target.value)}
+        />
+        <button onClick={() => InAction(user, email)}>Submit</button>
       </center>
     </div>
   );
