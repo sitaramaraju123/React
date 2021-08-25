@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Fav from "./Fav/fav";
+import store from "./Fav/store";
 import "./index.css";
-import store from "./Login/store";
+// import store from "./Login/store";
 import { Provider } from "react-redux";
-import App from "./Login/App";
+// import App from "./Reg/App";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Provider store={store}> */}
+    {/* <App /> */}
+    {/* </Provider> */}
     <Provider store={store}>
-      <App />
+      <Fav />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
