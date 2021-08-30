@@ -3,6 +3,10 @@ import { connect } from "react-redux";
 import { Submit } from "./action";
 const Fav = ({ data, Submit }) => {
   // const [state, setState] = useState(false);
+  console.log(mapStateToProps);
+  console.log(Submit);
+  console.log(data);
+  console.log(connect);
   return (
     <div>
       <center>

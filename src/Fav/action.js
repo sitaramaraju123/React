@@ -3,3 +3,9 @@ export const Submit = () => async dispatch => {
     type: "SUBMIT"
   });
 };
+
+// return dispatch => {
+//   dispatch({
+//     type: "SUBMIT"
+//   });
+// };
